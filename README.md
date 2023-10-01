@@ -1,5 +1,32 @@
 # Terraform Beginner Bootcamp 2023
 
+- [Terraform Beginner Bootcamp 2023](#terraform-beginner-bootcamp-2023)
+  * [Semantic Versioning](#semantic-versioning)
+  * [Install Terraform CLI](#install-terraform-cli)
+  * [Refactoring into bash scripts](#refactoring-into-bash-scripts)
+  * [Considerations for Linux distribution](#considerations-for-linux-distribution)
+  * [Shebang](#shebang)
+  * [Linux Permistions](#linux-permistions)
+    + [Github lifecycle Before, Ininit, Commmand](#github-lifecycle-before--ininit--commmand)
+    + [Working Env Vars](#working-env-vars)
+      - [env command](#env-command)
+      - [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
+      - [Printing Vars](#printing-vars)
+      - [Scoping of Env Vars](#scoping-of-env-vars)
+      - [Persisting Env Vars in Gitpod](#persisting-env-vars-in-gitpod)
+    + [AWS CLI Installation](#aws-cli-installation)
+  * [Terraform Basics](#terraform-basics)
+    + [Terraform Registry](#terraform-registry)
+    + [Terraform Console](#terraform-console)
+    + [Terraform Init](#terraform-init)
+    + [Terraform Plan](#terraform-plan)
+    + [Terraform Apply](#terraform-apply)
+    + [Terraform Destroy](#terraform-destroy)
+    + [Terraform Lock Files](#terraform-lock-files)
+    + [Terraform State files](#terraform-state-files)
+    + [Terraform Directory](#terraform-directory)
+    + [Terraform Cloud Login Workaround for Gitpod](#terraform-cloud-login-workaround-for-gitpod)
+
 ## Semantic Versioning
 
 This project is going utilize semantic versioning for its tagging.
@@ -51,7 +78,7 @@ chmod 744 ./bin/install_terraform_cli
 
 https://en.wikipedia.org/wiki/Chmod
 
-### Github lifecycle (Before, Ininit, Commmand)
+### Github lifecycle Before, Ininit, Commmand
 We need to be careful when using the Init because it will not rerun if we restart an existing workspace.
 
 https://www.gitpod.io/docs/configure/workspaces/tasks
@@ -154,7 +181,7 @@ This will run a plan and pass the changeset to be executed by terraform. Apply s
 
 If we want to automatically approve an apply, we can provide the auto approve flag. eg `terraform apply --auto-approve`
 
-#### Terraform Destroy
+### Terraform Destroy
 `teraform destroy`
 This will destroy your resources.
 
