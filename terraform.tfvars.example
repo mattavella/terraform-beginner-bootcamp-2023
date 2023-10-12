@@ -1,5 +1,4 @@
-terratowns_endpoint="http://localhost:4567/api"
-teacherseat_user_uuid="a7041418-9420-4909-9116-fa5b577c4faf" 
+terratowns_endpoint="https://terratowns.cloud/api"
 bucket_name = "terraboot23mta2023"
 
 index_html_filepath="/workspace/terraform-beginner-bootcamp-2023/public/index.html"
