@@ -60,7 +60,7 @@ We can use the `-var` flag to set an input variable or override a variable in th
 
 ### var-file flag
 
-- TODO: document this flag
+- Set variables in the Terraform configuration from a variable file. If a terraform.tfvars or any .auto.tfvars files are present in the current directory, they will be automatically loaded. terraform.tfvars is loaded first and the .auto.tfvars files after in alphabetical order. Any files specified by -var-file override any values set automatically from files in the working directory. This flag can be used multiple times. This is only useful with the -config flag.
 
 ### terraform.tvfars
 
@@ -68,11 +68,15 @@ This is the default file to load in terraform variables in blunk
 
 ### auto.tfvars
 
-- TODO: document this functionality for terraform cloud
+- Terraform automatically loads all files in the current directory with the exact name terraform.tfvars or matching *.auto.tfvars. You can also use the -var-file flag to specify other files by name.
 
 ### order of terraform variables
 
-- TODO: document which terraform variables takes presendence.
+- Terraform evaluates variables according to a defined order of precedence, which determines which value will be used if a variable is declared in multiple locations. The following is the order of precedence for variable assignment:
+
+ 1. Environment variables
+ 2. Terraform.tfvars file and .auto.tfvars files
+ 3. Variable defaults in the module configuration
 
 ## Dealing With Configuration Drift
 
