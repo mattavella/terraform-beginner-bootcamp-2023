@@ -35,7 +35,7 @@ resource "terratowns_home" "home" {
 This rib eye steak recipe is tender and juicy beef seared to golden brown perfection, and topped with garlic butter and herbs. A simple steak preparation that tastes like it came from a fancy restaurant!
 DESCRIPTION
   domain_name = module.home_ribeye_hosting.domain_name
-  town = "missingo"
+  town = "cooker-cove"
   content_version = var.ribeye.content_version
 }
 
