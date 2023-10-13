@@ -1,9 +1,7 @@
 terratowns_endpoint="https://terratowns.cloud/api"
 bucket_name = "terraboot23mta2023"
 
-variable "ribeye" {
-  type = object({
-    public_path = string
-    content_version = number
-  })
+ribeye = {
+  public_path = "/workspace/terraform-beginner-bootcamp-2023/public/ribeye"
+  content_version = 2 
 }
